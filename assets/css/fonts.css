@@ -1,0 +1,89 @@
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('MuseoSansCyrl-300.eot');
+    src: local('☞MuseoSansCyrl-300'), local('MuseoSansCyrl-300'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff2') format('woff2'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff') format('woff'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('MuseoSansCyrl-500.eot');
+    src: local('☞MuseoSansCyrl-500'), local('MuseoSansCyrl-500'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500.woff2') format('woff2'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500.woff') format('woff'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('MuseoSansCyrl-700.eot');
+    src: local('☞MuseoSansCyrl-700'), local('MuseoSansCyrl-700'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff2') format('woff2'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff') format('woff'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url('MuseoSansCyrl-900.eot');
+    src: local('☞MuseoSansCyrl-900'), local('MuseoSansCyrl-900'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900.woff2') format('woff2'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900.woff') format('woff'),
+        url('@/assets/fonts/MuseoSansCyrl/MuseoSansCyrl-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* подключение Gogh */
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Regular.eot');
+    src: local('Gogh Regular'), local('Gogh-Regular'),
+        url('@/assets/fonts/Gogh/Gogh-Regular.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/Gogh/Gogh-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/Gogh/Gogh-Regular.woff') format('woff'),
+        url('@/assets/fonts/Gogh/Gogh-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-Medium.eot');
+    src: local('Gogh Medium'), local('Gogh-Medium'),
+        url('@/assets/fonts/Gogh/Gogh-Medium.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/Gogh/Gogh-Medium.woff2') format('woff2'),
+        url('@/assets/fonts/Gogh/Gogh-Medium.woff') format('woff'),
+        url('@/assets/fonts/Gogh/Gogh-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gogh';
+    src: url('Gogh-ExtraBold.eot');
+    src: local('Gogh Extra Bold'), local('Gogh-ExtraBold'),
+        url('@/assets/fonts/Gogh/Gogh-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('@/assets/fonts/Gogh/Gogh-ExtraBold.woff2') format('woff2'),
+        url('@/assets/fonts/Gogh/Gogh-ExtraBold.woff') format('woff'),
+        url('@/assets/fonts/Gogh/Gogh-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

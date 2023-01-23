@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "db":"json-server --watch db.json"
+  },
+  "devDependencies": {
+    "nuxt": "^3.0.0"
+  },
+  "dependencies": {
+    "@nuxtjs/google-fonts": "^2.0.0",
+    "json-server": "^0.17.1"
+  }
+}
