@@ -22,14 +22,17 @@ let DropdownVisible = ref(false);
 <style scoped>
     .dropdown{
         transition: all .5s linear;
+        overflow-y: hidden;
     }
     .v-enter-active,
     .v-leave-active {
-      transition: opacity 0.5s ease;
+      transition: opacity 0.8s ease, max-height .8s ease-in-out;
+      max-height: 1000px;
     }
 
     .v-enter-from,
     .v-leave-to {
+        max-height: 0px;
       opacity: 0;
     }
     .dropdown-title{

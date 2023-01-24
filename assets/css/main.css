@@ -148,7 +148,7 @@ input {
 
 /* Стили tabs */
 
-.ui-tabs-tab {
+.tabs .p-relative {
     display: flex;    
     background: #F2F4F6;
     border-radius: 8px;
@@ -157,30 +157,37 @@ input {
     font-weight: 300;
     font-size: 16px;
     line-height: 120%;
+    border-radius: 8px;
 }
 
-.ui-tabs-tab a{
+.tabs .p-relative a{
     padding: 16px;
+    border-radius: 8px;
 }
 
-.ui-tabs-active {
+.tabs .p-relative a.is-active {
     background: #FFFFFF;
-    border: 1px solid #000000;     
+    border: 1px solid #000000;    
+    padding: 15px;    
 }
 
-.ui-tabs-active a{
-    padding: 15px;   
-}
-
-.ui-tabs-nav {
+.tabs .tabs-component-tabs{
     display: flex;
     gap: 16px;
     overflow: auto;
 }
 
-.ui-tabs-nav::-webkit-scrollbar {
-    height: 0px;
+.tabs .tabs-component-tabs::-webkit-scrollbar{
+    height: 0;
 }
+
+.tabs-component-panel{
+    display: flex;
+    margin-top: 16px;
+    gap:16px;
+}
+
+
 
 /* Стили swiper */
 
@@ -418,7 +425,7 @@ body{
     display: flex;    
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 24px;
+    padding-top: 24px;
 }
 
 .filter .item .content-link{   
@@ -1215,9 +1222,18 @@ ol{
 
 .choose .swiper-button-prev , .choose .swiper-button-next{   
     width: 53px;
-    height: 53px;
+    height: 53px;    
     margin-top: 0;
-    position: static;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.choose .swiper-button-prev {   
+    content: url('~/assets/img/swiper-prev.svg');
+}
+
+.choose .swiper-button-next {   
+    content: url('~/assets/img/swiper-next.svg');
 }
 
 .choose .swiper-button-prev:after {   
@@ -1226,6 +1242,7 @@ ol{
 
 .choose .mySwiper3{
     display: flex;
+    grid-column: full;
 }
 
 .clients{    
@@ -1362,8 +1379,19 @@ ol{
 .history .swiper-button-prev , .history .swiper-button-next{   
     width: 53px;
     height: 53px;
+    transform: translateY(-50%);
     margin-top: 0;
-    position: static;
+    position: absolute;
+}
+
+.history .swiper-button-prev {   
+    content: url('~/assets/img/swiper-prev.svg');
+    left: 0;
+}
+
+.history .swiper-button-next {   
+    content: url('~/assets/img/swiper-next.svg');
+    right: 0;
 }
 
 .history .swiper-button-prev:after {   
@@ -1372,6 +1400,13 @@ ol{
 
 .history .swiper{
     width: 100%;
+}
+
+.history .mySwiper4{
+    display: flex;
+    grid-column: 2;
+    margin: 0 -63px;
+    padding: 0 63px;
 }
 
 .about_dop{        
@@ -1501,7 +1536,7 @@ ol{
     }
 
     .filter .item .content {        
-        margin-top: 13px;
+        padding-top: 13px;
     }
 
     .filter {        

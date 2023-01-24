@@ -41,7 +41,7 @@
                         <div class="header">{{technic.title}}</div>
                         <p v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
                         <div class="btn_box">
-                            <a href="#" class="btn_secondary">Подробнее</a>
+                            <NuxtLink :to="`/Catalog/Product/${technic.id}`" class="btn_secondary">Подробнее</NuxtLink>
                             <button class="btn_primary">Заказать</button>
                         </div>                        
                     </div>
