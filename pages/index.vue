@@ -3,46 +3,46 @@
     <TheBestOffer></TheBestOffer>
     <Breadcrumbs></Breadcrumbs>
     
-    <div class="catalogs">
-            <div class="headling grid-full">Аренда автокрана</div>
+    <div class="catalogs grid max-md:grid-cols-1 pt-7 md:pt-0 gap-6 pb-10 md:pb-20">
+            <div class="h1 capitalize mb-3.5 md:mb-14 grid-full">Аренда автокрана</div>
 
-            <div class="filter " id="accordion"> 
-                <Dropdown :title="'Подбор техники'" class="item"> 
-                    <ul class="content content-link">
-                        <li class="link"><a href="#">Автовышки</a></li>
-                        <li class="link"><a href="#">Автокраны</a></li>
-                        <li class="link"><a href="#">Экскаваторы</a></li>
-                        <li class="link"><a href="#">Телескопические погрузчики</a></li>
-                        <li class="link"><a href="#">Катки</a></li>
-                        <li class="link"><a href="#">Манипуляторы</a></li>
-                        <li class="link"><a href="#">Бульдозеры</a></li>
-                        <li class="link"><a href="#">Бортовая машина</a></li>
-                        <li class="link"><a href="#">Вахтовка</a></li>
-                    </ul>                    
+            <div class="flex flex-col gap-5 md:gap-10 mt-0.5 " id="accordion"> 
+                <Dropdown :title="'Подбор техники'"> 
+                    <ul class="flex flex-wrap gap-1 pt-6 flex-col ">
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Автовышки</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Автокраны</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Экскаваторы</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Телескопические погрузчики</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Катки</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Манипуляторы</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Бульдозеры</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Бортовая машина</a></li>
+                        <li class="p-4 bg-[#F2F4F6] font-light text-base"><a href="#">Вахтовка</a></li>
+                    </ul>  
                 </Dropdown>  
                 <Dropdown :title="'Грузоподъёмность/тонн'">
-                    <ul class="dropdown-content ">
-                        <label v-for="tonnage in  filters.tonnages" :class="{'active':forms.tonnage.includes(tonnage)}"  :key="tonnage.id" class="filterLabel">{{tonnage}}<input type="checkbox" class="radio d-none" v-model="forms.tonnage" :value="tonnage"></label>                 
+                    <ul class="flex gap-2 flex-wrap pt-6 ">
+                        <label v-for="tonnage in  filters.tonnages" :class="{'bg-[#fff] border-[#000]':forms.tonnage.includes(tonnage), 'bg-[#F2F4F6] border-transparent':!forms.tonnage.includes(tonnage)}"  :key="tonnage.id" class="border  border-solid flex p-4  rounded-lg w-fit cursor-pointer font-light text-base">{{tonnage}}<input type="checkbox" class="hidden" v-model="forms.tonnage" :value="tonnage"></label>                 
                     </ul>    
                 </Dropdown>                
                 <Dropdown :title="'Производитель'">
-                    <ul class="dropdown-content ">
-                        <label v-for="manufacturer in  filters.manufacturers" :class="{'active':manufacturer==forms.manufacturer}"  :key="manufacturer.id" class="filterLabel">{{manufacturer}}<input type="radio" class="radio d-none" v-model="forms.manufacturer" :value="manufacturer"></label>                            
+                    <ul class="flex gap-2 flex-wrap pt-6 ">
+                        <label v-for="manufacturer in  filters.manufacturers" :class="{'bg-[#fff] border border-solid border-black p-4':forms.tonnage.includes(tonnage)}" :key="manufacturer.id" class="border-transparent border border-solid flex p-4 bg-[#F2F4F6] rounded-lg w-fit cursor-pointer font-light text-base">{{manufacturer}}<input type="radio" class="hidden" v-model="forms.manufacturer" :value="manufacturer"></label>                            
                     </ul>    
                 </Dropdown>
             </div>
 
-            <div class="catalog">
-                <div class="card" v-for="technic of technicsFilter">
-                    <div class="img">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-6 gap-x-6 h-fit md:gap-y-4 wrapper">
+                <div class="px-1.5 pb-3 md:p-3 pt-0 bg-white shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] rounded-lg font-light text-sm " v-for="technic of technicsFilter">
+                    <div class="text-center">
                         <img src="../assets/img/image1.png" alt="">
                     </div>
-                    <div class="text">
-                        <div class="header">{{technic.title}}</div>
-                        <p v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
-                        <div class="btn_box">
-                            <NuxtLink :to="`/Catalog/Product/${technic.id}`" class="btn_secondary">Подробнее</NuxtLink>
-                            <button class="btn_primary">Заказать</button>
+                    <div class="p-3">
+                        <div class="mb-4 font-bold text-base text-black">{{technic.title}}</div>
+                        <p class="flex gap-2 justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
+                        <div class="mt-4 flex gap-2 flex-wrap">
+                            <NuxtLink :to="`/Catalog/Product/${technic.id}`" class="btn_secondary flex-1">Подробнее</NuxtLink>
+                            <button class="btn_primary flex-1">Заказать</button>
                         </div>                        
                     </div>
                 </div>                
@@ -78,10 +78,5 @@
 </script>
 
 <style>
-.dropdown-content{
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 24px;
-} 
+
 </style>
