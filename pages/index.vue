@@ -72,8 +72,6 @@
     await useFetch('http://localhost:3000/technics').then(res=>{
         technics.value = res.data.value
     })
-
-
         
 </script>
 
