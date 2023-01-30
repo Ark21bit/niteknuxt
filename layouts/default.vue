@@ -1,4 +1,5 @@
 <template>
+    <Header></Header>
     <main class="Prose">
         <slot></slot>
     </main>

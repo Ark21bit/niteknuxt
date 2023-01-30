@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer utilities{
+
+    .router-link-active{
+        @apply bg-slate-600
+    }
+
     .input_primary{
         @apply py-[18px] px-3 bg-white border border-solid border-[#CCCCD1] shadow-[0_0_0_0_#CBDAFC] rounded text-base text-[#26263A] placeholder:text-[#26263A] placeholder:text-base;
     } 
