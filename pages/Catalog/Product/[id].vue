@@ -7,27 +7,27 @@
             <div class="flex gap-7 flex-wrap justify-center font-light text-base text-[#26263A]">
                 <div class="galerey max-w-[590px] w-full ">                    
 
-                    <swiper  :spaceBetween="10" class="swiper mySwiper2" :thumbs="{ swiper: thumbsSwiper }" :modules="[ SwiperThumbs]" :loop="true" style="height: 500px;" >
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_4.png" />
+                    <swiper  :spaceBetween="10" class="swiper mySwiper2 max-h-[390px] mb-4" :thumbs="{ swiper: thumbsSwiper }" :modules="[ SwiperThumbs]" :loop="true" style="height: 500px;" >
+                        <swiper-slide class="swiper-slide max-h-[390px]">
+                            <img src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_5.png" />
+                        <swiper-slide class="swiper-slide max-h-[390px]">
+                            <img src="~/assets/img/image_5.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_4.png" />
+                        <swiper-slide class="swiper-slide max-h-[390px]">
+                            <img src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>                       
                     </swiper>
                  
                     <swiper @swiper="setThumbsSwiper" :spaceBetween="13" :loop="true"  :slidesPerView="3" class="swiper mySwiper" :modules="[ SwiperThumbs]">
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_4.png" />
+                        <swiper-slide class="opacity-100 cursor-pointer max-h-[87px]">
+                            <img src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_5.png" />
+                        <swiper-slide class="opacity-100 cursor-pointer  max-h-[87px]">
+                            <img src="~/assets/img/image_5.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>
-                        <swiper-slide class="swiper-slide">
-                            <img src="~/assets/img/image_4.png" />
+                        <swiper-slide class="opacity-100 cursor-pointer  max-h-[87px]">
+                            <img src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>                                       
                     </swiper>    
 

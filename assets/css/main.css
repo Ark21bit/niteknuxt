@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
+@layer utilities{   
+    main{
+        @apply grow
+    }
 
     .router-link-active{
-        @apply bg-slate-600
+        @apply opacity-50;
+    }
+
+    .logo-link{
+        @apply opacity-100;
     }
 
     .input_primary{
@@ -38,11 +45,7 @@
 
     .wrapper{
         @apply w-full max-w-[1320px] px-3 mx-auto        
-    }
-
-    main{
-        @apply grow
-    }
+    }    
 
     .h1{
         @apply font-bold text-4xl md:text-5xl leading-tight        
@@ -62,8 +65,8 @@
     
     .btn_secondary{
         @apply flex items-center justify-center rounded px-3 py-3 font-semibold text-sm uppercase border border-[#003771] text-[#003771] border-solid cursor-pointer
-    }
-    
+    }       
+
     .btn_primary{
         @apply flex items-center justify-center bg-[#003771] rounded px-3 py-3 font-semibold text-sm uppercase border border-[#003771] text-white border-solid cursor-pointer
     }
@@ -87,14 +90,14 @@
     }
 
     .tabs .tabs-btn{
-        @apply flex bg-[#F2F4F6] rounded-lg w-fit cursor-pointer font-light text-base        
+        @apply flex bg-[#F2F4F6] mb-4 rounded-lg w-fit cursor-pointer font-light text-base        
     }
     
-    .tabs .tabs-btna{
+    .tabs .tabs-btn a{
         @apply p-4 rounded-lg    
     }
     
-    .tabs .tabs-btna.is-active {
+    .tabs .tabs-btn a.is-active {
         @apply border border-solid border-black p-[15px] bg-white  
     }    
 
@@ -108,139 +111,57 @@
     
     .tabs-component-panel{
         @apply flex gap-4 mt-4          
-    }    
+    }   
 
-    .choose .swiper-button-prev , .choose .swiper-button-next{   
+    .swiper-button-prev , .swiper-button-next{   
         @apply w-14 h-14 mt-0 -translate-y-1/2 absolute max-md:hidden      
     }
     
-    .choose .swiper-button-prev {   
+    .swiper-button-prev {   
         content: url('~/assets/img/swiper-prev.svg');
     }
     
-    .choose .swiper-button-next {   
+    .swiper-button-next {   
         content: url('~/assets/img/swiper-next.svg');
     }
     
-    .choose .swiper-button-prev:after {   
+    .swiper-button-prev:after {   
         content: "";
-    }       
+    }    
+    
+    .other_box {      
+        background: linear-gradient(173.16deg, #EEF1F4 5.74%, #FFFFFF 103.32%);
+    }  
+
+    .mySwiper4 .swiper-wrapper{
+        @apply mt-20
+    }
+    
+    .mySwiper4 .swiper-pagination{
+        @apply flex gap-2.5 top-0 justify-between h-fit items-center        
+    }
+    
+    .mySwiper4 .swiper-pagination::-webkit-scrollbar{
+        @apply h-0
+    }   
+    
+    .mySwiper4 .swiper-pagination-bullet{
+        @apply w-auto text-[#009DD9] bg-transparent text-lg opacity-100 h-fit rounded-none        
+    }
+    
+    .mySwiper4 .swiper-pagination-bullet-active{
+        @apply font-bold text-2xl text-[#003771] border-b border-solid border-[#003771] py-2 px-4        
+    }      
+
+    .bg-radial-g2{  
+        background: radial-gradient(85.99% 338.76% at 17.96% 89.28%, #0C3C73 42.27%, #009CD9 100%);
+    }    
+    
+    .bg-radial-gradient{
+        background: radial-gradient(122.6% 298.87% at 11.12% 30.17%, #0C3C73 42.27%, #009CD9 100%);
+    }
     
 }
-/* Стили формы */
-
-.feedback .btn_primary{
-    max-width: 306px;
-    width: 100%;
-    height: 58px;    
-    font-size: 18px;
-    line-height: 22px;        
-    text-transform: uppercase;
-    margin: auto;
-    margin-top: 25px;
-}
-
-/* Стили swiper */
-
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    content: ''!important;
-    transform:scale(1.5);
-}
-
-.mySwiper2{
-    max-height: 390px;
-    margin-bottom: 17px;
-}
-
-.mySwiper2 .swiper-wrapper{
-    max-height: 390px;
-}
-
-.mySwiper2 .swiper-slide{
-    max-height: 390px;    
-}
-
-.mySwiper2 .swiper-slide img{
-    width: 100%;
-    object-fit: cover;
-    max-height: 400px;
-    height: 390px;
-}
-
-.mySwiper .swiper-slide {    
-    opacity: 1;
-    cursor: pointer;
-    height: 87px;
-}
-
-.mySwiper .swiper-slide img{    
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
-/* Стили */
-
-body{
-    font-family: 'Museo Sans Cyrl';
-}
-
-
-.additional_text{
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    color: #26263A;
-    padding: 77px 0 200px;
-}
-
-.additional_text .headling{
-    font-family: 'Gogh';
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 120%;    
-    color: #26263A;
-    margin-bottom: 38px;  
-}
-
-.other_box {    
-    background: linear-gradient(173.16deg, #EEF1F4 5.74%, #FFFFFF 103.32%);
-}
-
-ol{
-    list-style-position: inside;
-}
-
-.calc_body{
-    display: flex;
-    gap: 46px;
-}
-
-.calc_box .headling{
-    margin-bottom: 68px;   
-    word-wrap: break-word;
-}
-.calc_box .calc{
-    max-width: 523px;
-}
-
-.calc_box .calc .form .btn_primary{
-    max-width: 306px;
-    height: 58px;
-    margin-top: 18px;
-}
-
-.calc_box .calc .ol{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5em;
-    font-size: 16px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    margin-bottom: 42px;
-}
-
 .services_header{
     background: linear-gradient(180deg, transparent 0%, transparent 90%, #FFFFFF 90%), linear-gradient(261.71deg, #EEF1F4 53.13%, #FFFFFF 93.71%);
     margin-bottom: 80px;
@@ -477,173 +398,9 @@ ol{
     flex-shrink: 2;
 }
 
-.bg-radial-g2{  
-    background: radial-gradient(85.99% 338.76% at 17.96% 89.28%, #0C3C73 42.27%, #009CD9 100%);
-}
-
-.history::before{
-    content: " ";
-    background: #D2E0ED;
-    height: 1px;
-    width: calc(100vw - 30px);
-    position: absolute;
-    top: 281px;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-.history .swiper-wrapper{
-    margin-top: 80px;
-}
-
-.history .swiper-pagination{
-    display: flex;
-    gap: 10px;
-    top:0;
-    justify-content: space-between;
-    height: fit-content;
-    align-items: center;
-}
-
-.history .swiper-pagination::-webkit-scrollbar{
-    height: 0;
-}   
-
-.history .swiper-pagination .swiper-pagination-bullet{
-    width: auto;
-    content: "";
-    background: none;
-    color: #009DD9;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    opacity: 1;
-    height: fit-content;
-    border-radius: 0;    
-    font-family: Arial, sans-serif;
-}
-
-.history .swiper-pagination .swiper-pagination-bullet-active{
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 22px;
-    color: #003771;
-    border-bottom: 3px solid #003771;
-    padding: 8px 16px;
-}
-
-.history .swiper-button-prev , .history .swiper-button-next{   
-    width: 53px;
-    height: 53px;
-    transform: translateY(-50%);
-    margin-top: 0;
-    position: absolute;
-}
-
-.history .swiper-button-prev {   
-    content: url('~/assets/img/swiper-prev.svg');
-    left: 0;
-}
-
-.history .swiper-button-next {   
-    content: url('~/assets/img/swiper-next.svg');
-    right: 0;
-}
-
-.history .swiper-button-prev:after {   
-    content: "";
-}
-
-
-
-.bg-radial-gradient{
-    background: radial-gradient(122.6% 298.87% at 11.12% 30.17%, #0C3C73 42.27%, #009CD9 100%);
-}
 
 @media (max-width:767px) {
     
-
-    .text_img_box{
-        flex-direction: column;
-    }
-
-    .text_img_box .text{
-        order:1;
-    }
-
-    /* Стили swiper */
-
-    .mySwiper2{
-        max-height: 295px; 
-        margin-bottom: 6px;   
-    }
-
-    .mySwiper2 .swiper-wrapper{
-        max-height: 295px;
-    }
-
-    .mySwiper2 .swiper-slide{
-        max-height: 295px;    
-    }
-
-    .mySwiper2 .swiper-slide img{   
-        max-height: 295px;
-        height: 295px;
-    }
-
-    .mySwiper .swiper-slide {        
-        height: 74px;
-    }    
-
-   
-
-    .proposal{
-        background:  url(../img/radial_gradient_blue.svg);
-        background-position:right bottom;
-        background-repeat: no-repeat;
-        background-size: cover;        
-    }
-    
-    .additional_text  {        
-        font-size: 24px;    
-        padding: 22px 0 36px ;         
-        font-size: 16px;        
-    }
-
-    .additional_text .headling {        
-        font-size: 24px;      
-        margin-bottom: 24px;  
-    } 
-
-
-    .other_box {      
-        background: linear-gradient(173.16deg, #EEF1F4 5.74%, #FFFFFF 103.32%);
-    }        
-    .proposal_2 {   
-        background: url(../img/image8.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 554px;
-        background-position: bottom;
-        padding: 57px 0 49px;    
-        margin-bottom: 47px;
-    }   
-    
-   
-    .feedback .btn_primary {        
-        margin-top: 16px;
-    }    
-    
-    .calc_body{
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .calc_body .calc{
-        max-width: none;
-        order: 2;
-    }
-
     .services{        
         gap:11px;
         grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
@@ -724,11 +481,8 @@ ol{
 
     .Benefits .wrapper .headling{
         margin-bottom: 14px;
-    }    
+    }  
 
-    .text_img_box{
-        gap:14px;
-    }
 
     .Benefits .description {
         margin:  0 0 24px 0;        
@@ -750,86 +504,15 @@ ol{
 
     .rents .wrapper .btn {
        display: none;
-    }    
-
-    .history .swiper-slide {
-        display: flex;
-        gap: 80px;
-        flex-direction: column;
-    }
-
-    .history .swiper-slide>.text {
-        flex: 1;
-    }
-
-    .history .swiper-slide>.img {
-        flex: 1;
-    }
-
-    .history .swiper-slide .text {        
-        margin-left: 0;
-    }
+    }       
     
 }
 
-@media (max-width:649px) {   
 
-    .history {
-        display: grid;
-        grid-template-columns: [full-start] 1fr 1fr  [full-end];
-        justify-items: center;
-    }
-
-    .history .swiper {
-        grid-column: full;
-    }
-
-    .history .swiper-button-prev, .history .swiper-button-next{
-        grid-row: 3;
-    }  
-    
-    .history {        
-        padding: 50px 0;
-    }
-
-    .history .swiper-pagination {
-        overflow: scroll;
-    }
-
-    .history .headling {
-        margin-bottom: 0;       
-    }
-
-    .history .swiper-slide {
-        display: flex;
-        gap: 30px;
-        flex-direction: column;
-    }
- }
 
 @media (max-width:449px) {  
 
-    .mySwiper2{
-        max-height: 195px;    
-    }
-    
-    .mySwiper2 .swiper-wrapper{
-        max-height: 195px;
-    }
-    
-    .mySwiper2 .swiper-slide{
-        max-height: 195px;    
-    }
-    
-    .mySwiper2 .swiper-slide img{   
-        max-height: 195px;
-        height: 195px;
-    }
-    
-    .mySwiper .swiper-slide {        
-        height: 74px;
-    }
-
+   
     .rents {
         background: linear-gradient(0deg, #EEF2F4 2.52%, rgba(235, 239, 242, 0) 90.06%);
         padding: 54px 0 34px;

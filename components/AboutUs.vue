@@ -7,7 +7,7 @@
                     <input type="text" placeholder="Имя" class="input_primary">
                     <input type="email" placeholder="Электронная почта" class="input_primary">
                     <input type="tel" placeholder="Телефон" class="input_primary">
-                    <input type="submit" class="btn_primary">
+                    <input type="submit" class="btn_primary w-full max-w-[306px] mt-6 m-auto max-md:mt-4">
                 </form>
             </div>
         </div> 
