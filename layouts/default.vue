@@ -1,12 +1,6 @@
 <template>
     <Header></Header>
     <main class="Prose">
-        <slot></slot>
+        <NuxtPage/>
     </main>
-
 </template>
-
-<script setup>
-
-</script>
-

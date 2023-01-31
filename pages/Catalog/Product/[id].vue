@@ -151,6 +151,7 @@
     }
 
     let technic = ref({})
+   
     await useFetch(`http://localhost:3000/technics?id=${route.params.id}`).then(res=>{
         technic.value = res.data.value[0]
     })

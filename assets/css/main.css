@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @layer utilities{   
+
+    .Prose {        
+        grid-template-columns: [full-start] minmax(12px, 1fr) [main-start] minmax(0, 1296px) [main-end] minmax(12px, 1fr) [full-end];        
+        @apply grid auto-rows-max
+    }
+
+    .Prose > * {
+        grid-column: main;
+    }
+
+    .Prose-splash {
+        grid-column: full;
+    }
+
     main{
         @apply grow
     }
@@ -30,18 +44,7 @@
         @apply h-screen m-0 flex flex-col        
     }
 
-    .Prose {        
-        grid-template-columns: [full-start] minmax(12px, 1fr) [main-start] minmax(0, 1296px) [main-end] minmax(12px, 1fr) [full-end];        
-        @apply grid auto-rows-max
-    }
-
-    .Prose > * {
-        grid-column: main;
-    }
-
-    .Prose-splash {
-        grid-column: full;
-    }
+    
 
     .wrapper{
         @apply w-full max-w-[1320px] px-3 mx-auto        
