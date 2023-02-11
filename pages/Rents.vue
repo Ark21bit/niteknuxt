@@ -1,84 +1,58 @@
 <template>
-        <div class="services_header grid-full">
-            <div class="wrapper">
-                <div>
-                    <Breadcrumbs/>
-                    <h1 class="h1 headling">УСЛУГИ</h1>
-                </div>
-                <div class="img">
-                    <picture>
-                        <source media="(min-width:768px)" srcset="../img/image9.png">
-                        <source media="(min-width:320px)" srcset="../img/image16.png">
-                        <img src="../img/image16.png" alt="">
-                    </picture>
-                </div>    
+        <TheBestOffer />
+        <div class="rents py-24 mb-24 grid-full">
+            <div class="wrapper grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                <h2 class="h2 mb-2.5 md:mb-11 grid-full">НАШИ УСЛУГИ ПО АРЕНДЕ СПЕЦТЕХНИКИ</h2>
+                <RentsTemplate />
+                <a href="#" class="max-md:hidden btn w-fit m-auto mt-8 btn_primary_big grid-full ">ПОЛУЧИТЬ ОСОБЫЕ УСЛОВИЯ ПО АРЕНДЕ</a>
             </div>
         </div>
-        
-            
-        
-        <div class="services">
-            <div class="card">
-                <img src="../img/services1.svg" alt="">
-                <div class="headling">Перебазирование техники</div>
-                <p class="description">Организуем доставку техники из нашего автопарка с опытными водителями на любую строительную площадку в России. При необходимости обеспечим условия для проживания и питания сотрудников на объекте, а также обустроим ремонтную базу для поддержания техники в рабочем состоянии.«Лахта Центр»</p>
-                <a href="#" class="link">подробнее <img src="../img/Arrow.svg" alt=""></a>
-            </div>
-            <div class="card">
-                <img src="../img/services2.svg" alt="">
-                <div class="headling">Подбор техники онлайн</div>
-                <p class="description">Экономим ваше время и помогаем с выбором техники в онлайн-формате. С характеристиками автомобилей, доступных к аренде, можно ознакомиться на сайте. А ваш персональный менеджер поможет согласовать детали сотрудничества до составления договора.</p>
-                <a href="#" class="link">подробнее <img src="../img/Arrow.svg" alt=""></a>
-            </div>
-            <div class="card">
-                <img src="../img/services3.svg" alt="">
-                <div class="headling">Персональный менеджер</div>
-                <p class="description">За вами закрепляется персональный менеджер, который сопровождает вас при выборе техники, согласования условий аренды и оплаты, подписания договора и перебазировки техники на ваш объект в сопровождении опытных водителей.</p>
-                <a href="#" class="link">подробнее <img src="../img/Arrow.svg" alt=""></a>
-            </div>
-            <div class="card">
-                <img src="../img/services4.svg" alt="">
-                <div class="headling">Аренда автопарка</div>
-                <p class="description">Вы можете арендовать любую технику из нашего автопарка на 300 часов и более. В собственности «НИТЭК» 340 единиц спецтехники, включая 60 автовышек. Также к аренде доступны уникальные для РФ автовышки с вылетом стрелы 75 м.</p>
-                <a href="#" class="link">подробнее <img src="../img/Arrow.svg" alt=""></a>
-            </div>
-            <div class="card">
-                <img src="../img/services5.svg" alt="">
-                <div class="headling">ППР (проект производства работ)</div>
-                <p class="description">Эксперты «НИТЭК» помогут с разработкой проекта производства работ и подготовкой проектно-технологической документации. Проконсультируем, какая техника нужна для выполнения определенного вида работ на вашем объекте, составим схему расстановки техники на рабочей площадке, организуем необходимые условия выполнения строительных работ.</p>
-                <a href="#" class="link">подробнее <img src="../img/Arrow.svg" alt=""></a>
-            </div>
-        </div>
-        
-        <div class="Prose-splash advantages">
+        <div class="Benefits font-light text-base pb-20 bg-no-repeat bg-right bg-[url(~/assets/img/Benefits.svg)] grid-full">
             <div class="wrapper">
-                <div class="headling">НИТЭК В ЦИФРАХ<a href="#">О нас<img src="../img/Arrow.svg" alt=""></a></div>
-                <div class="text">
-                    <div><p class="number">300+ </p><p>Единиц новой техники</p></div>
-                    <div><p class="number">900+ </p><p>Сотрудников компании   </p></div>
-                    <div><p class="number"><span>с</span> 2003 <span>г.</span> </p><p>Партнеры крупнейших строительных площадок   </p></div>
-                    <div><p class="number">20+ </p><p>Завершенных в срок строительных объектов  </p></div>
+                <h2 class="h2 headling mb-4 md:mb-14 max-w-[885px]" >ВАШИ ПРЕИМУЩЕСТВА ПРИ ДОЛГОСРОЧНОЙ АРЕНДЕ СПЕЦТЕХНИКИ</h2>
+                <div class="mb-30">
+                    <div class="text">
+                        <p class="description md:mt-8 mt-6 md:mb-10 text-base md:text-xl">НИТЭК – крупная федеральная компания. С 2003 года специализируется на аренде крупногабаритной спецтехники для любых видов строительных работ.</p>
+                        <p class="ul_title list-disc list-inside font-bold text-base mb-1.5 md:mb-6">На 2022 год мы имеем:</p>
+                        <ul class="ul list-disc list-inside font-light shrink-[0.33]">                                                                      
+                            <li>собственную базу в г. Свободный;</li>
+                            <li>более 800 сотрудников;</li>
+                            <li>более 300 единиц новой спецтехники;</li>
+                            <li>автопарк один из крупнейших в России;</li>
+                            <li>лидирующие позиции на строительных объектах федерального масштаба.</li>
+                        </ul>
+                    </div>
+                    <div class="img"><img src="../img/image13.png" alt=""></div>
                 </div>
-            </div>
-        </div>  
-        <div class="Prose-splash bg1">
-            <div class="feedback wrapper">
-                <div class="headling">У вас ещё остались вопросы?</div>
-                <p>Заказать аренду необходимой вам техники можно по телефону: +7 931 106 23 74 - звонок бесплатный по России. Также в случае необходимости менеджер нашей компании поможет вам определиться с выбором идеального варианта техники для вашего вида высотных работ, исходя из характера объекта и поставленных задач.</p>
-                <form action="#" class="form">
-                    <input type="text" placeholder="Имя" class="input_primary">
-                    <input type="email" placeholder="Электронная почта" class="input_primary">
-                    <input type="tel" placeholder="Телефон" class="input_primary">
-                    <input type="submit" class="btn_primary">
-                </form>
+                <div class="additionally max-md:w-[calc(100%+24px)] max-md:-ml-3 bg-radial-g3 max-md:flex-col flex gap-8 px-3 md:px-28 pt-9 md:pt-16 max-md:mb-10 pb-10 text-base ">
+                    <p class="max-w-[628px]">Услуги аренды специальной техники от собственника позволят вам быстро и качественно справиться с земляными, дорожными, строительными и монтажными работами. В автопарке крупнейшей компании «НИТЭК» новая спецтехника последних лет выпуска, оснащенная системами автоматизации. Мы предлагаем более полутра сотен единиц спецтехники разного назначения с широким диапазоном грузоподъемности и высоты работы, а именно:</p>
+                    <ul class="ul">
+                        <li>автовышки с длиной стрелы от 32 до 75 метров;</li>
+                        <li>автокраны и гусеничные краны от 25 до 250 тонн;</li>
+                        <li>экскаваторы-погрузчики;</li>
+                        <li>бульдозеры-экскаваторы;</li>
+                        <li>самосвалы;</li>
+                        <li>низкорамные тралы;</li>
+                        <li>высокорамные тралы.</li>
+                    </ul>
+                </div>
+                <div class="text_img_box">
+                    <div class="img"><img src="../img/image14.png" alt=""></div>
+                    <div class="text">
+                        <p>Вся техника находится в идеальном рабочем состоянии и регулярно обслуживается нашими опытными мастерами. Для регулярного обслуживания и избегания любых внештатных ситуаций вместе со спецтехникой мы отправляем целый штат сотрудников. На каждый объект выезжают квалифицированные специалисты – машинист, автослесарь, механик и автоэлектрик.
+                        <br><br>Команда специалистов «НИТЭК» обладает достаточной квалификацией, чтобы выполнять работы любой сложности качественно и в кратчайшие сроки, а также избежать возможных трудностей, связанных с проведением работ. Кроме всего прочего, мы можем взять на себя задачи по мобилизацию техники на объект, а также организационные вопросы, касающиеся питания и проживания машинистов и других сотрудников.</p>
+                    </div>
+                </div>
+                <h2 class="h2 title mb-4 md:mb-16">СТОИМОСТЬ УСЛУГИ</h2>
+                <div class="text_img_box">
+                    <div class="text">
+                        <p>Стоимость аренды спецтехники зависит от срока, вида и грузоподъемности необходимого вам оборудования. Стоит учитывать, что при заключении долгосрочного договора о сотрудничестве, цена на наши услуги существенно снижается.
+                        <br><br>Кроме того, нашим постоянным клиентам мы предоставляем скидки и специальные условия аренды. Гибкая ценовая политика, индивидуальный подход и собственный транспорт – то, что отличает нас от конкурентов.</p>
+                        <button class="btn w-full  md:w-[310px] max-md:mb-10 mt-4 md:mt-10 btn_primary_big ">ЗАКАЗАТЬ</button>
+                    </div>
+                    <div class="img"><img src="../img/image15.png" alt=""></div>
+                </div>
             </div>
         </div>
 </template>
 
-<script setup>
-
-</script>
-
-<style lang="scss" scoped>
-
-</style>
