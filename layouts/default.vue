@@ -1,6 +1,7 @@
 <template>
-    <Header></Header>
+    <Header/>
     <main class="Prose">
         <NuxtPage/>
     </main>
+    <Footer/>
 </template>

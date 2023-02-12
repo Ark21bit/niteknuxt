@@ -142,8 +142,10 @@
 </template>
 
 <script setup>
+
     import {Tabs, Tab} from 'vue3-tabs-component';
     const route = useRoute()
+    const config = useRuntimeConfig()
 
     let thumbsSwiper = ref(null);
     const setThumbsSwiper = (swiper) => {
@@ -151,8 +153,7 @@
     }
 
     let technic = ref({})
-   
-    await useFetch(`http://localhost:3000/technics?id=${route.params.id}`).then(res=>{
+    await useFetch(`${config.public.apiBase}/technics?id=${route.params.id}`).then(res=>{
         technic.value = res.data.value[0]
     })
 </script>

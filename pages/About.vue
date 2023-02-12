@@ -4,7 +4,7 @@
                 <div class="wrapper">
                     <Breadcrumbs></Breadcrumbs>
                     <h1 class="h1 flex mb-20 items-center mt-12">О КОМПАНИИ</h1>
-                    <div class="bg-[#0c3c73] md:bg-contain md:bg-no-repeat md:bg-[url(../img/info_bg.svg)] bg-cover py-12 px-3 md:px-28 max-w-[1040px] text-white">
+                    <div class="max-md:bg-[#0c3c73] md:bg-contain md:bg-no-repeat md:bg-[url(../img/info_bg.svg)] bg-cover py-12 px-3 md:px-28 max-w-[1040px] text-white">
                         <h2 class=" font-bold text-3xl md:text-[42px] mb-6 max-w-[600px]">НИТЭК. Ответственность. Доверие. Надежность.</h2>
                         <p class="font-light text-xl max-w-[414px]">НИТЭК — это федеральная компания, специализирующаяся на аренде спецтехники для любых видов строительных работ. Основана в 2003 году в городе Нижний Новгород.</p>
                     </div>
@@ -72,61 +72,61 @@
             </div>
             
         </div>
-        <div class="block mb-9 relative py-12 md:py-24 before:bg-[#D2E0ED] before:h-[1px] before:w-[calc(100vw-30px)] before:absolute before:top-64 before:-translate-x-1/2 before:left-1/2">
+        <div class="block mb-9 relative py-12 md:py-24 before:bg-[#D2E0ED] before:h-[1px] max-md:before:hidden before:w-[calc(100vw-30px)] before:absolute before:top-64 before:-translate-x-1/2 before:left-1/2">
             <h2 class="h2 md:mb-12 uppercase grid-full">История развития компании</h2>            
 
             <swiper class="swiper mySwiper4 pt-20 w-full flex col-start-2 -mx-16 px-16" :modules="[SwiperPagination, SwiperNavigation]" :navigation="true" slidesPerView="1" :spaceBetween="63" :pagination="pagination"  >
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col " >
-                  <div class="mt-20 max-md:flex-1 max-w-[300px] md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px] md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2003  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                   <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2008  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2009  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2012  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2016  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2018  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2020  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>
                  <div class="max-w-[640px] max-md:flex-1"><img src="~/assets/img/image15.png" alt=""></div>
                 </swiper-slide>                    
                 <swiper-slide class="flex gap-7 md:gap-20 max-md:flex-col ">
-                  <div class="mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
+                  <div class="md:mt-20 max-md:flex-1 max-w-[300px]  md:ml-auto">
                     <h2 class="font-bold text-[40px] text-[#003771] mb-9">2022  </h2>
                     <p class="font-light text-xl">Начало работы компании на рынке логистических услуг </p>
                   </div>

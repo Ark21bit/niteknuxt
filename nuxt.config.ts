@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules:[    
     'nuxt-simple-sitemap',
     ['nuxt-swiper',{ styleLang: 'css', modules: ['navigation', 'thumbs', 'pagination'],}], 
-    ['@nuxtjs/robots', {configPath:"~/robots.config.js" }], 
+    ['@nuxtjs/robots', {configPath:"~/robots.config.js" }],     
   ],   
 
   nitro: {
@@ -15,9 +15,12 @@ export default defineNuxtConfig({
     }
   },
 
+  
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://ark21bit-opulent-goggles-5p9vvv65w9437v6g-3001.preview.app.github.dev',
+      apiBase:'http://localhost:3000',
     }
   },
 
