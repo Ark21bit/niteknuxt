@@ -10,7 +10,7 @@
         </button>
         <div class="flex grow gap-5 md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
             <NuxtLink to="/catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
-            <NuxtLink to="/about" class="router-link text-sm uppercase">О нас</NuxtLink>
+            <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
             <NuxtLink to="/services" class="router-link text-sm uppercase">Услуги</NuxtLink>
             <NuxtLink to="/" class="router-link text-sm uppercase">Вход</NuxtLink>     
             <div class="flex ml-auto gap-2">

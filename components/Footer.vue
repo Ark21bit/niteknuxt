@@ -14,7 +14,7 @@
                 </div>
                 <div class="flex gap-5 md:gap-10 max-sm:w-full max-sm:py-3">
                     <NuxtLink to="/catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
-                    <NuxtLink to="/about" class="router-link text-sm uppercase">О нас</NuxtLink>
+                    <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
                     <NuxtLink to="/services" class="router-link text-sm uppercase">Услуги</NuxtLink>                    
                 </div>
             </div>
