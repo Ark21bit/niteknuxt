@@ -1,1 +1,3 @@
-google-site-verification: google2dec9c4fcc90e07a.html
+<template>
+    google-site-verification: google2dec9c4fcc90e07a.html
+</template>
