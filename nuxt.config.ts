@@ -43,8 +43,7 @@ export default defineNuxtConfig({
   },  
   app:{
     head:{
-      meta:[
-        {name:"yandex-verification", content:"f6734357f8e34199"},
+      meta:[        
         {name:"google-site-verification", content:"f1QqmIjDx2ZjjcuU0_t-9baPowyGmFp-pwbnrSchUw0"}
       ]
     }
