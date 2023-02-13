@@ -15,7 +15,12 @@ export default defineNuxtConfig({
     }
   },
 
-  
+  routeRules: {
+    // Don't add any /secret/** URLs to the sitemap.xml  
+    '/account': { index: false },
+    '/Account': { index: false },
+   
+  }
 
   runtimeConfig: {
     public: {
