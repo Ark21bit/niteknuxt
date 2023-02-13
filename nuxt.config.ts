@@ -37,4 +37,12 @@ export default defineNuxtConfig({
       },
     },
 
+  app:{
+    head:{
+      meta:[
+        {name:"yandex-verification", content:"f6734357f8e34199"}
+      ]
+    }
+  }
+
 })
