@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     '/account': { index: false },
     '/Account': { index: false },
    
-  }
+  },
 
   runtimeConfig: {
     public: {
@@ -29,18 +29,18 @@ export default defineNuxtConfig({
     }
   },
 
-    css: [
-      
-        '~/assets/css/fonts.css',        
-        '~/assets/css/main.css',  
-              
-      ],
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+  css: [
+    
+      '~/assets/css/fonts.css',        
+      '~/assets/css/main.css',  
+            
+    ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
+  },
 
   app:{
     head:{
