@@ -40,8 +40,7 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
-  },
-
+  },  
   app:{
     head:{
       meta:[
