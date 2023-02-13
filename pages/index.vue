@@ -56,7 +56,7 @@
      </div>            
         
 
-    <PopularTecnick/>
+   
     <Advantages/>
     <Partners/>
     <AboutUs/>
