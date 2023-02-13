@@ -1,6 +1,6 @@
 export default [
     { UserAgent: '*' },
-    { Disallow: '/' },  
+    { Disallow: '/account' },  
     
-    { Sitemap: (req) => `https://${req.headers.host}/sitemap.preview.xml` }
+    { Sitemap: (req) => `https://${req.headers.host}/sitemap.xml` }
   ]
