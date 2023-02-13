@@ -4,18 +4,18 @@
             <div class="flex max-md:flex-col gap-4 justify-between">
                 <div class="flex flex-col gap-4 text-xl text-[#26263A]">
                     <div class="flex flex-col gap-1">
-                        <a href="tel:+7 931 106 23 61">+7 931 106 23 61</a>
+                        <a href="tel:+79311062361">+7 931 106 23 61</a>
                         <p class="text-xs">Аренда спецтехники</p>
                     </div>
                     <div class="flex flex-col gap-1">
-                        <a href="tel:+7 (831) 217-00-08">+7 (831) 217-00-08</a>
+                        <a href="tel:+7(831)217-00-08">+7 (831) 217-00-08</a>
                         <p class="text-xs">Отдел персонала</p>
                     </div>                    
                 </div>
                 <div class="flex gap-5 md:gap-10 max-sm:w-full max-sm:py-3">
-                    <NuxtLink to="/catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
+                    <NuxtLink to="/Catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
                     <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
-                    <NuxtLink to="/services" class="router-link text-sm uppercase">Услуги</NuxtLink>                    
+                    <NuxtLink to="/Services" class="router-link text-sm uppercase">Услуги</NuxtLink>                    
                 </div>
             </div>
             <div class="flex md:gap-4 gap-2 mt-6">

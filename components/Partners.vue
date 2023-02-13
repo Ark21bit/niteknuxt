@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-2 md:grid-cols-4 items-center justify-items-center pt-12 pb-5 md:py-20 gap-9 md:gap-14 ">
-            <div class="headling grid-full text-2xl md:text-4xl font-bold uppercase mb-2 md:mb-4">Нас выбирают</div>
+            <h2 class="headling grid-full text-2xl md:text-4xl font-bold uppercase mb-2 md:mb-4">Нас выбирают</h2>
             <div class="w-fit max-w-fit opacity-50 block grayscale">
                 <picture>
                     <source media="(max-width:767px)" srcset="@/assets/img/partners1XS.png">

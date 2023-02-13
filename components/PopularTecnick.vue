@@ -1,6 +1,6 @@
 <template>
     <div class="Prose-splash other_box pt-20 pb-12 md:py-24">            
-            <div class="headling mb-6 h2 wrapper max-md:hidden">Популярная техника</div>
+            <h2 class="headling mb-6 h2 wrapper max-md:hidden">Популярная техника</h2>
             <div class="catalog grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-y-6 gap-x-6 h-fit md:gap-y-4 wrapper">
                 <div class="card px-1.5 pb-3 md:p-3 pt-0 bg-white shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] rounded-lg font-light text-sm " v-for="n of 4">
                     <div class="text-center">

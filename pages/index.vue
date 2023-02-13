@@ -2,31 +2,31 @@
     <div class=" grid-full Prose bg-[#EEF2F4] pt-8 md:pt-16 pb-4 md:pb-8">        
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 ">
             <h2 class="h2 md:mb-12 uppercase grid-full">Аренда спецтехники</h2>  
-            <NuxtLink to="/catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
+            <NuxtLink to="/Catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
                 <div class="mb-5 self-center max-md:hidden"><img src="~/assets/img/rent1.svg" alt=""></div>
                 <p class="text-lg font-bold">Аренда автокрана</p>
                 <p class=" font-light text-[#7A7A7A]">от 2000 ₽/час </p>
             </NuxtLink>
-            <div class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
+            <NuxtLink to="/Catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
                 <div class="mb-5 self-center max-md:hidden"><img src="~/assets/img/rent1.svg" alt=""></div>
                 <p class="text-lg font-bold">Аренда автокрана</p>
                 <p class=" font-light text-[#7A7A7A]">от 2000 ₽/час </p>
-            </div>
-            <div class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
+            </NuxtLink>
+            <NuxtLink to="/Catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
                 <div class="mb-5 self-center max-md:hidden"><img src="~/assets/img/rent1.svg" alt=""></div>
                 <p class="text-lg font-bold">Аренда автокрана</p>
                 <p class=" font-light text-[#7A7A7A]">от 2000 ₽/час </p>
-            </div>
-            <div class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
+            </NuxtLink>
+            <NuxtLink to="/Catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
                 <div class="mb-5 self-center max-md:hidden"><img src="~/assets/img/rent1.svg" alt=""></div>
                 <p class="text-lg font-bold">Аренда автокрана</p>
                 <p class=" font-light text-[#7A7A7A]">от 2000 ₽/час </p>
-            </div>
-            <div class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
+            </NuxtLink>
+            <NuxtLink to="/Catalog" class="flex flex-col p-5 bg-white rounded-2xl shadow-[0_4px_15px_0_rgba(0,0,0,0.1)]">
                 <div class="mb-5 self-center max-md:hidden"><img src="~/assets/img/rent1.svg" alt=""></div>
                 <p class="text-lg font-bold">Аренда автокрана</p>
                 <p class=" font-light text-[#7A7A7A]">от 2000 ₽/час </p>
-            </div>
+            </NuxtLink>
         </div>
     </div>
 
@@ -63,6 +63,3 @@
 
 </template>
 
-<script setup>
-   
-</script>

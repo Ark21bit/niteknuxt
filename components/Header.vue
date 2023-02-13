@@ -9,21 +9,30 @@
             <span class="h-1 w-full bg-black rounded-sm transition-all duration-500" :class="{'rotate-[29deg] origin-top-right': isNav}"></span>
         </button>
         <div class="flex grow gap-5 md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
-            <NuxtLink to="/catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
+            <NuxtLink to="/Catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
             <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
-            <NuxtLink to="/services" class="router-link text-sm uppercase">Услуги</NuxtLink>
-            <NuxtLink to="/" class="router-link text-sm uppercase">Вход</NuxtLink>     
+            <NuxtLink to="/Services" class="router-link text-sm uppercase">Услуги</NuxtLink>
+               
             <div class="flex ml-auto gap-2">
                 <div class="text-sm uppercase text-[#003771]">ru</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">en</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">ch</div>
+                
             </div>   
+            <div v-if="auth">{{ accountStore.account }}</div>
+            <NuxtLink v-else to="/" class="router-link text-sm uppercase">Вход</NuxtLink>  
         </div>
     </header>
 </template>
 
 <script setup>
+    import { useAccountStore } from "~/stores/accountStore";
+
     let isNav = ref();
+    let auth = ref(true);
+   
+    const accountStore = useAccountStore();
+    accountStore.getAccount();
 </script>
 
 <style type="text/tailwindcss">

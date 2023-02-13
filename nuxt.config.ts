@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     ['nuxt-swiper',{ styleLang: 'css', modules: ['navigation', 'thumbs', 'pagination'],}], 
     ['@nuxtjs/robots', {configPath:"~/robots.config.js" }],     
+    ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate'],},]
   ],   
 
   nitro: {
@@ -13,6 +14,10 @@ export default defineNuxtConfig({
         '/',
       ]
     }
+  },
+
+  imports: {
+    dirs: ['stores'],
   },
 
   routeRules: {

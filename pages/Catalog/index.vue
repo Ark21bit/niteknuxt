@@ -4,7 +4,7 @@
     <Breadcrumbs></Breadcrumbs>
     
     <div class="catalogs grid max-md:grid-cols-1 pt-7 md:pt-0 gap-6 pb-10 md:pb-20">
-            <div class="h1 capitalize mb-3.5 md:mb-14 grid-full">Аренда</div>
+            <h2 class="h1 capitalize mb-3.5 md:mb-14 grid-full">Аренда</h2>
 
             <div class="flex flex-col gap-5 md:gap-10 mt-0.5 " id="accordion"> 
                 <Dropdown :title="'Подбор техники'"> 
@@ -35,7 +35,7 @@
                             <img src="~/assets/img/image1.png" alt="">
                         </div>
                         <div class="p-3">
-                            <div class="mb-4 font-bold text-base text-black">{{technic.title}}</div>
+                            <h3 class="mb-4 font-bold text-base text-black">{{technic.title}}</h3>
                             <p class="flex gap-2 justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
                             <div class="mt-4 flex gap-2 flex-wrap">
                                 <NuxtLink :to="`/Catalog/${technic.id}`" class="btn_secondary flex-1">Подробнее</NuxtLink>

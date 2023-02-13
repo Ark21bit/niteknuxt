@@ -3,7 +3,7 @@
         <Breadcrumbs></Breadcrumbs>
 
         <div class="products mb-9">
-            <div class="font-bold text-4xl md:text-5xl mb-7 md:mb-12">{{ technic.title }}</div>
+            <h2 class="font-bold text-4xl md:text-5xl mb-7 md:mb-12">{{ technic.title }}</h2>
             <div class="flex gap-7 flex-wrap justify-center font-light text-base text-[#26263A]">
                 <div class="galerey max-w-[590px] w-full ">                    
 
@@ -34,13 +34,13 @@
                 </div>
                 <div class="flex flex-col gap-10  md:ml-12 md:max-w-[306px]">
                     <div class="item">
-                        <div class="font-bold text-base text-black mb-6">Описание</div>
+                        <h3 class="font-bold text-base text-black mb-6">Описание</h3>
                         <p class="max-md:ml-0 ">{{technic.description}}</p>
                         <p class="font-bold text-[#009DD9] mt-2">подробнее</p>
                     </div>
 
                     <div class="item">
-                        <div class="font-extrabold text-base mb-4 md:mb-6 text-black">Характеристики</div>
+                        <h3 class="font-extrabold text-base mb-4 md:mb-6 text-black">Характеристики</h3>
                         <p class="flex justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>   
                     </div>
                     
@@ -61,7 +61,7 @@
             <tabs class="tabs" nav-item-class="tabs-btn" :options="{ useUrlFragment: false }">
                 <tab class="flex gap-9 md:gap-x-6 flex-wrap" name="Характеристики">
                     <div class="flex flex-col gap-y-6 max-w-[526px] font-light text-base text-black grow">
-                        <div class="font-bold text-base text-black">Технические характеристики1</div>
+                        <h3 class="font-bold text-base text-black">Технические характеристики1</h3>
                         <p class="flex justify-between">Длина основной стрелы, м.<span >40</span></p>
                         <p class="flex justify-between">Макс. вылет м<span ></span>3,2</p>
                         <p class="flex justify-between">Макс. высота подъема, м.<span >58,1</span></p>
@@ -79,7 +79,7 @@
                 </tab>
                 <tab class="flex  gap-9 md:gap-x-6 flex-wrap" name="Описание">
                     <div class="flex flex-col gap-y-6 max-w-[526px] font-light text-base text-black grow">
-                        <div class="font-bold text-base text-black">Технические характеристики2</div>
+                        <h3 class="font-bold text-base text-black">Технические характеристики2</h3>
                         <p class="flex justify-between">Длина основной стрелы, м.<span >40</span></p>
                         <p class="flex justify-between">Макс. вылет м<span ></span>3,2</p>
                         <p class="flex justify-between">Макс. высота подъема, м.<span >58,1</span></p>
@@ -91,13 +91,13 @@
                         <p class="flex justify-between">Стоимость, р/час (от):<span >3000</span></p>
                     </div>
                     <div class="md:ml-28">
-                        <div class="font-bold text-base text-black mb-11">Грузоподъёмные характеристики</div>
+                        <h3 class="font-bold text-base text-black mb-11">Грузоподъёмные характеристики</h3>
                         <img src="~/assets/img/image6.png" alt="">
                     </div>
                 </tab>
                 <tab class="flex  gap-9 md:gap-x-6 flex-wrap" name="Габариты">
                     <div class="flex flex-col gap-y-6 max-w-[526px] font-light text-base text-black grow">
-                        <div class="font-bold text-base text-black">Технические характеристики3</div>
+                        <h3 class="font-bold text-base text-black">Технические характеристики3</h3>
                         <p class="flex justify-between">Длина основной стрелы, м.<span >40</span></p>
                         <p class="flex justify-between">Макс. вылет м<span ></span>3,2</p>
                         <p class="flex justify-between">Макс. высота подъема, м.<span >58,1</span></p>
@@ -115,7 +115,7 @@
                 </tab>
                 <tab class="flex  gap-9 md:gap-x-6 flex-wrap" name="Документация">
                     <div class="flex flex-col gap-y-6 max-w-[526px] font-light text-base text-black grow">
-                        <div class="font-bold text-base text-black">Технические характеристики4</div>
+                        <h3 class="font-bold text-base text-black">Технические характеристики4</h3>
                         <p class="flex justify-between">Длина основной стрелы, м.<span >40</span></p>
                         <p class="flex justify-between">Макс. вылет м<span ></span>3,2</p>
                         <p class="flex justify-between">Макс. высота подъема, м.<span >58,1</span></p>
@@ -127,7 +127,7 @@
                         <p class="flex justify-between">Стоимость, р/час (от):<span >3000</span></p>
                     </div>
                     <div class="md:ml-28">
-                        <div class="font-bold text-base text-black mb-11">Грузоподъёмные характеристики</div>
+                        <h3 class="font-bold text-base text-black mb-11">Грузоподъёмные характеристики</h3>
                         <img src="~/assets/img/image6.png" alt="">
                     </div>
                 </tab>
