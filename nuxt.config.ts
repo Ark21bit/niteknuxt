@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   app:{
     head:{
       meta:[        
-        {name:"google-site-verification", content:"f1QqmIjDx2ZjjcuU0_t-9baPowyGmFp-pwbnrSchUw0"}
+        {name:"google-site-verification", content:"m739jUQraET8qY2wQrH_u34_xSOiCQYiFS_ylLS4mLI"}
       ]
     }
   }
