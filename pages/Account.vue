@@ -1,12 +1,12 @@
 <template>
     <div>
         <h2 class="h2 grid-full mb-12">Ваша арендованная техника</h2>         
-        {{ user }}
+        {{ accountStore.account }}
     </div>
 </template>
 
 <script setup>
-
+    import { useAccountStore } from "~/stores/accountStore";
 
     useHead({
         meta:[ 
@@ -26,9 +26,8 @@
         technics.value = res.data.value
     }) */
 
-    let user = ref({})
-    await useFetch(`${config.public.apiBase}/accounts`).then(res=>{
-        user.value = res.data.value
-    })
+    const accountStore = useAccountStore();
+    accountStore.getAccount();
+    
 
 </script>

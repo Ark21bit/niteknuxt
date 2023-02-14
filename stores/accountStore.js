@@ -7,7 +7,7 @@ export const useAccountStore = defineStore('accountStore',{
     }),
     actions:{
         async getAccount() {
-            await useFetch(`http://localhost:3000/accounts`).then(res=>{
+            await useFetch(`https://vast-red-dove-kit.cyclic.app/accounts`).then(res=>{
                 this.account = res.data.value
             })
         },

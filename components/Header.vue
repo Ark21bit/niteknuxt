@@ -13,13 +13,13 @@
             <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
             <NuxtLink to="/Services" class="router-link text-sm uppercase">Услуги</NuxtLink>
                
-            <div class="flex ml-auto gap-2">
+            <div class="flex ml-auto items-center gap-2">
                 <div class="text-sm uppercase text-[#003771]">ru</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">en</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">ch</div>
                 
             </div>   
-            <div v-if="auth">{{ accountStore.account }}</div>
+            <div v-if="accountStore.account">{{ accountStore.account.name }}</div>
             <NuxtLink v-else to="/" class="router-link text-sm uppercase">Вход</NuxtLink>  
         </nav>
     </header>
@@ -29,7 +29,6 @@
     import { useAccountStore } from "~/stores/accountStore";
 
     let isNav = ref();
-    let auth = ref(true);
    
     const accountStore = useAccountStore();
     accountStore.getAccount();
