@@ -19,7 +19,7 @@
                 <div class="text-sm uppercase text-[#A2A5A8]">ch</div>
                 
             </div>   
-            <div v-if="accountStore.account">{{ accountStore.account.name }}</div>
+            <div v-if="accountStore.account">{{ accountStore.account.login }}</div>
             <NuxtLink v-else to="/" class="router-link text-sm uppercase">Вход</NuxtLink>  
         </nav>
     </header>

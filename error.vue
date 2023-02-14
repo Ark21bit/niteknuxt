@@ -4,7 +4,7 @@
             <p class="text-7xl font-black text-[#009DD9]">404</p>        
             <p class="text-2xl font-black text-[#003771]">Извините, страница которую вы ищите отсутствует!</p>        
             <p class="text-black text-base">Веб-страница могла быть удалена, ссылка могла быть изменена или временно недоступна.</p>
-            <NuxtLink to="/" class="router-link btn_secondary w-full">Вернуться на главную</NuxtLink>        
+            <NuxtLink to="/" class="btn_secondary w-full">Вернуться на главную</NuxtLink>        
         </div>
     </main>   
  
