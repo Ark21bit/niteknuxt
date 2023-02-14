@@ -8,7 +8,7 @@
             <span class="h-1 w-full bg-black rounded-sm transition-all duration-500" :class="{'opacity-0': isNav}"></span>
             <span class="h-1 w-full bg-black rounded-sm transition-all duration-500" :class="{'rotate-[29deg] origin-top-right': isNav}"></span>
         </button>
-        <div class="flex grow gap-5 md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
+        <nav class="flex grow gap-5 md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
             <NuxtLink to="/Catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
             <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
             <NuxtLink to="/Services" class="router-link text-sm uppercase">Услуги</NuxtLink>
@@ -21,7 +21,7 @@
             </div>   
             <div v-if="auth">{{ accountStore.account }}</div>
             <NuxtLink v-else to="/" class="router-link text-sm uppercase">Вход</NuxtLink>  
-        </div>
+        </nav>
     </header>
 </template>
 

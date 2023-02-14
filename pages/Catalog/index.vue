@@ -4,7 +4,7 @@
     <Breadcrumbs></Breadcrumbs>
     
     <div class="catalogs grid max-md:grid-cols-1 pt-7 md:pt-0 gap-6 pb-10 md:pb-20">
-            <h2 class="h1 capitalize mb-3.5 md:mb-14 grid-full">Аренда</h2>
+            <h2 class="h1 capitalize mb-3.5 md:mb-14 grid-full">Аренда Спецтехники</h2>
 
             <div class="flex flex-col gap-5 md:gap-10 mt-0.5 " id="accordion"> 
                 <Dropdown :title="'Подбор техники'"> 
@@ -51,6 +51,15 @@
 </template>
 
 <script setup>   
+
+    useHead({
+        title:"Каталог",
+        meta:[        
+            {name:"description", content:"Аренда спецтехники от собственника. Услуги аренды автовышки для строительных и монтажных работат. Автовышки 28,32,45 и 75 метров;"},
+            {name:"keywords", content:"каталог товаров спецтехники, купить спецтехнику, аренда спецтехники"},
+        ],   
+    })
+
     const config = useRuntimeConfig()
     const route = useRoute()    
 

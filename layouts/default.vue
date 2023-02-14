@@ -1,4 +1,4 @@
-<template>
+<template>    
     <Header/>
     <main class="Prose">
         <NuxtPage/>

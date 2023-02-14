@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     ['nuxt-swiper',{ styleLang: 'css', modules: ['navigation', 'thumbs', 'pagination'],}], 
     ['@nuxtjs/robots', {configPath:"~/robots.config.js" }],     
-    ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate'],},]
+    ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate'],},],
+    /* ['@nuxtjs/yandex-metrika',{id: '92462803', defer: true,}] */
   ],   
 
   nitro: {
@@ -49,8 +50,12 @@ export default defineNuxtConfig({
   app:{
     head:{
       meta:[        
-        {name:"google-site-verification", content:"m739jUQraET8qY2wQrH_u34_xSOiCQYiFS_ylLS4mLI"}
-      ]
+        {name:"google-site-verification", content:"m739jUQraET8qY2wQrH_u34_xSOiCQYiFS_ylLS4mLI"},
+        {name:"robots", content:"all"}
+      ],      
+      link:[
+        { rel: 'icon', type: 'image/x-icon', href: '~/assets/img/favicon.ico' }
+      ],
     }
   }
 

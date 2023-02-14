@@ -6,6 +6,14 @@
 </template>
 
 <script setup>
+
+
+    useHead({
+        meta:[ 
+            {name:"robots", content:"noindex"},
+        ],   
+    })
+
     const config = useRuntimeConfig()
     /* let technicsFilter = computed(()=>{
         return technics.value

@@ -53,13 +53,21 @@
                 <p class=" font-light text-sm mt-4">Компания «НИТЭК» предоставила технику для строительства общественно-делового комплекса «Лахта Центр»</p>
             </div>
         </div>                
-     </div>            
-        
-
-   
+     </div>  
+    <PopularTecnick/>
     <Advantages/>
     <Partners/>
     <AboutUs/>
 
 </template>
 
+<script setup>  
+
+    useHead({
+        title:"Аренда спецтехники",
+        meta:[        
+            {name:"description", content:"Спецтехника в аренду по всей России. Услуги аренды строительной техники."},
+            {name:"keywords", content:"спецтехника, купить спецтехнику, аренда спецтехники, спецтехника россия"},
+        ],   
+    })
+</script>
