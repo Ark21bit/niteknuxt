@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useAccountStore = defineStore('accountStore',{
     state:() =>({
-        account:{"adasd":"dasd"},
+        account:{},
     }),
     actions:{
         async getAccount() {
