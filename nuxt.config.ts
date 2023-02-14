@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     ['nuxt-swiper',{ styleLang: 'css', modules: ['navigation', 'thumbs', 'pagination'],}], 
     ['@nuxtjs/robots', {configPath:"~/robots.config.js" }],     
     ['@pinia/nuxt',{autoImports: ['defineStore', 'acceptHMRUpdate'],},],
-    /* ['@nuxtjs/yandex-metrika',{id: '92462803', defer: true,}] */
   ],   
 
   nitro: {

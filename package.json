@@ -19,13 +19,13 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/robots": "^3.0.0",
-    "@nuxtjs/yandex-metrika": "^1.4.0",
     "@pinia/nuxt": "^0.4.6",
     "json-server": "^0.17.1",
     "nuxt-swiper": "^0.1.9",
     "pinia": "^2.0.30",
     "sitemap": "^7.1.1",
     "vue": "latest",
+    "vue-gtag-next": "^1.14.0",
     "vue3-tabs-component": "^1.1.2"
   }
 }
