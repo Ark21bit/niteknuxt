@@ -8,6 +8,8 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
     "./error.vue",
+    'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
@@ -26,5 +28,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

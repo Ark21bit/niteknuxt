@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="h2 grid-full mb-12">Ваша арендованная техника</h2>         
-        {{ accountStore.account }}
+        {{ techniks }}
     </div>
 </template>
 
@@ -14,20 +14,18 @@
         ],   
     })
 
-    const config = useRuntimeConfig()
-    /* let technicsFilter = computed(()=>{
-        return technics.value
-        .filter((a)=>{return forms.value.tonnage.includes(a.characterisitics[2].value)})
-        .filter((a)=>{return forms.value.categorys.includes(a.category_id)})        
+    const config = useRuntimeConfig()    
+
+    let basket = ref({})
+    await useFetch(`http://localhost:3000/basket`).then(res=>{
+        basket.value = res.data.value
     })
 
-    let technics = ref({})
-    await useFetch(`${config.public.apiBase}/technics`).then(res=>{
-        technics.value = res.data.value
-    }) */
+    let techniks = ref({})
+    await useFetch(`http://localhost:3000/technics?id=${basket.value.technic_id}`).then(res=>{
+        techniks.value = res.data.value
+    })
 
-    const accountStore = useAccountStore();
-    accountStore.getAccount();
-    
+    const accountStore = useAccountStore(); 
 
 </script>

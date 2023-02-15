@@ -8,13 +8,17 @@ function getRandomInt(max) {
 
 export const useAccountStore = defineStore('accountStore',{
     state:() =>({
-        account:{},
+        login:null,
+        id:null,
+        isSuccess:true,
     }),
     actions:{
-        async getAccount() {
-            await useFetch(`https://vast-red-dove-kit.cyclic.app/accounts`).then(res=>{
-                this.account = res.data.value
-            })
+        async getAccount(email, password) {
+            await useFetch(`http://localhost:3000/accounts?email=${email}&password=${password}`).then(res=>{
+                console.log(res.data.value)
+                this.login = res.data.value[0].login
+                this.id = res.data.value[0].id
+            }).catch(err => console.log(err))
         },
         async addAccount(email, login, password) {            
             await useFetch( 'http://localhost:3000/accounts', {
@@ -25,7 +29,12 @@ export const useAccountStore = defineStore('accountStore',{
                     login: login,
                     password: password
                 }
-            });
+            })
+            .then(res => {
+                this.getAccount(email, password)
+                this.isSuccess = true
+            })
+            .catch(err => {this.isSuccess = false})             
         },
     }    
 });
