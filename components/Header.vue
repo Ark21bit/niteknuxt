@@ -19,7 +19,10 @@
                 <div class="text-sm uppercase text-[#A2A5A8]">ch</div>
                 
             </div>   
-            <div v-if="accountStore.login">{{ accountStore.login }}</div>
+            <div v-if="accountStore.login" class="flex gap-2">
+                {{ accountStore.login }}
+                <button @click="logout">Выход</button>
+            </div>
             <div v-else class="flex gap-3">
                 <NuxtLink to="/Login" class="router-link text-sm uppercase">Вход</NuxtLink> 
                 <NuxtLink to="/Signup" class="router-link text-sm uppercase">Регистрация</NuxtLink> 
@@ -32,9 +35,15 @@
 <script setup>
     import { useAccountStore } from "~/stores/accountStore";
 
+    const router = useRouter();
     let isNav = ref();
    
     const accountStore = useAccountStore();    
+
+    const logout = async ()=>{
+        await (accountStore.logout());        
+        router.push({ path: "/" })               
+    }  
 </script>
 
 <style type="text/tailwindcss">

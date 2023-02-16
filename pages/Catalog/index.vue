@@ -36,8 +36,8 @@
                         </div>
                         <div class="p-3">
                             <h3 class="mb-4 font-bold text-base text-black">{{technic.title}}</h3>
-                            <p class="flex gap-2 justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
-                            <div class="mt-4 flex gap-2 flex-wrap">
+<!--                             <p class="flex gap-2 justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
+ -->                            <div class="mt-4 flex gap-2 flex-wrap">
                                 <NuxtLink :to="`/Catalog/${technic.id}`" class="btn_secondary flex-1">Подробнее</NuxtLink>
                                 <button class="btn_primary flex-1">Заказать</button>
                             </div>                        
@@ -66,15 +66,16 @@
     /* блок обработки фильтров */
     let forms = ref({"tonnage": [], "categorys": []})
     let filters = ref({})
-    await useFetch(`${config.public.apiBase}/filters`).then(res=>{
+    await useFetch(`http://localhost:3000/filters`).then(res=>{
         filters.value = res.data.value
         forms.value.tonnage = res.data.value.tonnages
     })
 
     let technicsFilter = computed(()=>{
+        console.log(technics.value)
         return technics.value
-        .filter((a)=>{return forms.value.tonnage.includes(a.characterisitics[2].value)})
         .filter((a)=>{return forms.value.categorys.includes(a.category_id)})        
+        /* .filter((a)=>{return forms.value.tonnage.includes(a.characterisitics[0].value)}) */
     })
 
     /* блок обработки */

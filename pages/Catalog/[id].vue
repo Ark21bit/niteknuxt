@@ -41,15 +41,15 @@
 
                     <div class="item">
                         <h3 class="font-extrabold text-base mb-4 md:mb-6 text-black">Характеристики</h3>
-                        <p class="flex justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>   
+                        <p class="flex justify-between" v-for="characterisitic of technic.characteristics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>   
                     </div>
                     
                 </div>
                 <div class="cost_box flex flex-col grow gap-y-6 py-6 md:py-10 px-4 bg-[#F2F4F6] h-fit max-w-[306px]">
                     <div class=" mb-0">Стоимость аренды</div>
                     <div class="costs">
-                        <p class="cost-hour font-black text-5xl capitalize text-black pb-4 border-0 border-b  border-solid border-b-[#A1A6AB] mb-4">{{technic.price.hours}}<span class="text-2xl text-left">₽/Час</span></p>
-                        <p class="cost font-bold text-2xl capitalize text-black">{{technic.price.smena}}<span class="text-xs text-left">₽/Смена</span></p>
+                        <p class="cost-hour font-black text-5xl capitalize text-black pb-4 border-0 border-b  border-solid border-b-[#A1A6AB] mb-4">{{technic.price_hours}}<span class="text-2xl text-left">₽/Час</span></p>
+                        <p class="cost font-bold text-2xl capitalize text-black">{{technic.price_smena}}<span class="text-xs text-left">₽/Смена</span></p>
                     </div>
                     
                     <button class="btn_primary w-full text-lg h-14">Заказать</button>
@@ -156,8 +156,9 @@
     }
 
     let technic = ref({})
-    await useFetch(`${config.public.apiBase}/technics?id=${route.params.id}`).then(res=>{
-        technic.value = res.data.value[0]
+    await useFetch(`${config.public.apiBase}/technic/${route.params.id}`).then(res=>{
+        technic.value = res.data.value
+        console.log(technic.value)
     })
 
     

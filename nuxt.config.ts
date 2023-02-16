@@ -24,13 +24,15 @@ export default defineNuxtConfig({
     // Don't add any /secret/** URLs to the sitemap.xml  
     '/account': { index: false },
     '/Account': { index: false },
+    '/Admin': { index: false },
+    '/admin': { index: false },
    
   },
 
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://localhost:3000',
-      apiBase:'https://vast-red-dove-kit.cyclic.app',
+      apiBase:'http://nitek/public/api',
     }
   },
 
