@@ -9,25 +9,25 @@
 
                     <swiper  :spaceBetween="10" class="swiper mySwiper2 max-h-[390px] mb-4" :thumbs="{ swiper: thumbsSwiper }" :modules="[ SwiperThumbs]" :loop="true" style="height: 500px;" >
                         <swiper-slide class="swiper-slide max-h-[390px]">
-                            <img src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
+                            <img alt="" src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>
                         <swiper-slide class="swiper-slide max-h-[390px]">
-                            <img src="~/assets/img/image_5.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
+                            <img alt="" src="~/assets/img/image_5.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>
                         <swiper-slide class="swiper-slide max-h-[390px]">
-                            <img src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
+                            <img alt="" src="~/assets/img/image_4.png" class="w-full object-cover max-h-[400px] h-[390px] "/>
                         </swiper-slide>                       
                     </swiper>
                  
                     <swiper @swiper="setThumbsSwiper" :spaceBetween="13" :loop="true"  :slidesPerView="3" class="swiper mySwiper" :modules="[ SwiperThumbs]">
                         <swiper-slide class="opacity-100 cursor-pointer max-h-[87px]">
-                            <img src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
+                            <img alt="" src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>
                         <swiper-slide class="opacity-100 cursor-pointer  max-h-[87px]">
-                            <img src="~/assets/img/image_5.png" class="h-full object-cover w-full max-h-[87px]" />
+                            <img alt="" src="~/assets/img/image_5.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>
                         <swiper-slide class="opacity-100 cursor-pointer  max-h-[87px]">
-                            <img src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
+                            <img alt="" src="~/assets/img/image_4.png" class="h-full object-cover w-full max-h-[87px]" />
                         </swiper-slide>                                       
                     </swiper>    
 
@@ -52,7 +52,7 @@
                         <p class="cost font-bold text-2xl capitalize text-black">{{technic.price_smena}}<span class="text-xs text-left">₽/Смена</span></p>
                     </div>
                     
-                    <button class="btn_primary w-full text-lg h-14">Заказать</button>
+                    <button class="btn_primary w-full text-lg h-14" @click="addBasket(route.params.id)">Заказать</button>
                 </div>
             </div>
         </div>
@@ -142,10 +142,41 @@
 </template>
 
 <script setup>   
-
+    import { useAccountStore } from "~/stores/accountStore";  
+    import { useAlertStore } from "~/stores/alertStore";
     import {Tabs, Tab} from 'vue3-tabs-component';
 
-   
+    const router = useRouter()
+
+    const accountStore = useAccountStore();
+    const alertStore = useAlertStore();
+    const addBasket = async(technic_id)=>{
+        const { data, error } = await useFetch(`${config.public.apiBase}/user/basket`,{
+        method: 'post',
+        headers: {
+            Authorization: `Bearer ${accountStore.api_token}`,
+        },
+        body:{
+            technics_id:technic_id
+        },
+        onResponseError({ request, response, options }) {            
+            if (response.status) {
+            alertStore.type = "danger"
+            alertStore.message = "Не авторизован"
+            alertStore.isAlert = true  
+            return router.push({path:"/login"})            
+            }
+            alertStore.type = "danger"
+            alertStore.message = "При добавлении техники в корзину возникала ошибка"
+            alertStore.isAlert = true  
+        },   
+        onResponse({ request, response, options }) {
+            alertStore.type = "info"
+            alertStore.message = "Техника успешно добавлена в корзину"
+            alertStore.isAlert = true 
+        },
+        })   
+    } 
 
     const route = useRoute()
     const config = useRuntimeConfig()

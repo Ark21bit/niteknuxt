@@ -11,10 +11,11 @@
 
 <script setup>
 import { useAlertStore } from "~/stores/alertStore";
+import { useAccountStore } from "~/stores/accountStore";  
 import { Alert } from 'flowbite-vue'
 
 const alertStore = useAlertStore();
-
+const accountStore = useAccountStore();
 let isAlert = ref(false);
 
 alertStore.$subscribe((mutation, state) => {
@@ -25,6 +26,8 @@ alertStore.$subscribe((mutation, state) => {
         alertStore.isAlert = false
     }, 5000) 
 })
+
+
 
 </script>
 

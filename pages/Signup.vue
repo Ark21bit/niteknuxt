@@ -10,26 +10,13 @@
     </div>    
 </template>
 <script setup>
-    import { useAccountStore } from "~/stores/accountStore";
-    import { useAlertStore } from "~/stores/alertStore";    
+    import { useAccountStore } from "~/stores/accountStore";   
 
     const accountStore = useAccountStore();
-    const alertStore = useAlertStore();
-
-    const router = useRouter();
+    
     const form = ref({});
 
     const addAccount = async ()=>{
-        await (accountStore.addAccount(form.value.email, form.value.login, form.value.password));
-        if (accountStore.isSuccess) {
-            alertStore.type = "info"
-            alertStore.message = "Аккаунт успешно создан"
-            alertStore.isAlert = true
-            router.push({ path: "/account" })
-        }else{
-            alertStore.type = "danger"
-            alertStore.message = "При создании аккаунта произошла ошибка"
-            alertStore.isAlert = true  
-        }            
+        await accountStore.addAccount(form.value.email, form.value.login, form.value.password);             
     }    
 </script>

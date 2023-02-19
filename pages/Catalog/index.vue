@@ -30,16 +30,16 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-6 gap-x-6 h-fit md:gap-y-4 wrapper">
                 <transition-group name="size">
-                    <div class="px-1.5 pb-3 md:p-3 pt-0 bg-white shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] rounded-lg font-light text-sm " v-for="technic of technicsFilter" :key="technic.id">
+                    <div class="px-1.5 flex flex-col pb-3 md:p-3 pt-0 bg-white shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] rounded-lg font-light text-sm " v-for="technic of technicsFilter" :key="technic.id">
                         <div class="text-center">
-                            <img src="~/assets/img/image1.png" alt="">
+                            <img :src="'img/' + technic.img" alt="">
                         </div>
-                        <div class="p-3">
+                        <div class="p-3 flex flex-col grow">
                             <h3 class="mb-4 font-bold text-base text-black">{{technic.title}}</h3>
 <!--                             <p class="flex gap-2 justify-between" v-for="characterisitic of technic.characterisitics">{{characterisitic.title}} <span>{{characterisitic.value}}</span></p>                        
- -->                            <div class="mt-4 flex gap-2 flex-wrap">
+ -->                        <div class="pt-4 mt-auto flex gap-2 flex-wrap">
                                 <NuxtLink :to="`/Catalog/${technic.id}`" class="btn_secondary flex-1">Подробнее</NuxtLink>
-                                <button class="btn_primary flex-1">Заказать</button>
+                                <button class="btn_primary flex-1" @click="addBasket(technic.id)">Заказать</button>
                             </div>                        
                         </div>
                     </div>  
@@ -51,6 +51,8 @@
 </template>
 
 <script setup>   
+    import { useAccountStore } from "~/stores/accountStore";  
+    import { useAlertStore } from "~/stores/alertStore";
 
     useHead({
         title:"Каталог",
@@ -60,19 +62,26 @@
         ],   
     })
 
-    const config = useRuntimeConfig()
-    const route = useRoute()    
+    const route = useRoute()
+    const router = useRouter()
+
+    const config = useRuntimeConfig()    
+
+    const accountStore = useAccountStore();
+    const alertStore = useAlertStore();
 
     /* блок обработки фильтров */
     let forms = ref({"tonnage": [], "categorys": []})
     let filters = ref({})
+
     await useFetch(`http://localhost:3000/filters`).then(res=>{
         filters.value = res.data.value
         forms.value.tonnage = res.data.value.tonnages
+    }).catch(err=>{
+        console.log(err)
     })
 
     let technicsFilter = computed(()=>{
-        console.log(technics.value)
         return technics.value
         .filter((a)=>{return forms.value.categorys.includes(a.category_id)})        
         /* .filter((a)=>{return forms.value.tonnage.includes(a.characterisitics[0].value)}) */
@@ -83,20 +92,54 @@
     let technics = ref({})
     await useFetch(`${config.public.apiBase}/technics`).then(res=>{
         technics.value = res.data.value
+    }).catch(err=>{
+        console.log(err)
     })
 
     let categorys = ref({});
     await useFetch(`${config.public.apiBase}/categorys`).then(res=>{
-        categorys.value = res.data.value        
-        forms.value.categorys = res.data.value.map(x=>{return x.id})        
+        categorys.value = res.data.value      
+        if (route.query.category) {            
+            forms.value.categorys.push(Number(route.query.category))
+        }else{
+            forms.value.categorys = res.data.value.map(x=>{return x.id})        
+        }
+    }).catch(err=>{
+        console.log(err)
     })
 
-
+    const addBasket = async(technic_id)=>{
+        const { data, error } = await useFetch(`${config.public.apiBase}/user/basket`,{
+        method: 'post',
+        headers: {
+            Authorization: `Bearer ${accountStore.api_token}`,
+        },
+        body:{
+            technics_id:technic_id
+        },
+        onResponseError({ request, response, options }) {            
+            if (response.status) {
+            alertStore.type = "danger"
+            alertStore.message = "Не авторизован"
+            alertStore.isAlert = true  
+            return router.push({path:"/login"})            
+            }
+            alertStore.type = "danger"
+            alertStore.message = "При добавлении техники в корзину возникала ошибка"
+            alertStore.isAlert = true  
+        },   
+        onResponse({ request, response, options }) {
+            alertStore.type = "info"
+            alertStore.message = "Техника успешно добавлена в корзину"
+            alertStore.isAlert = true 
+        },
+        })   
+    } 
 
 </script>
 
 <style>
-.size-enter-active,
+    .size-enter-active,
     .size-leave-active {
       transition: all 0.5s ease;
     }

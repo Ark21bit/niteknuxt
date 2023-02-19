@@ -26,6 +26,8 @@ export default defineNuxtConfig({
     '/Account': { index: false },
     '/Admin': { index: false },
     '/admin': { index: false },
+    '/admin/**': { index: false },
+    '/Admin/**': { index: false },
    
   },
 
@@ -57,6 +59,7 @@ export default defineNuxtConfig({
       link:[
         { rel: 'icon', type: 'image/x-icon', href: '~/assets/img/favicon.ico' }
       ],
+      title:"Аренда спецтехники",
     }
   }
 

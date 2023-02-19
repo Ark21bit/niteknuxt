@@ -33,7 +33,7 @@ let DropdownVisible = ref(false);
     .v-enter-from,
     .v-leave-to {
         max-height: 0px;
-      opacity: 0;
+        opacity: 0;
     }
     .dropdown-title{
         display: flex;

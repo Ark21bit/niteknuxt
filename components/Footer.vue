@@ -1,5 +1,5 @@
 <template>
-    <footer class="Prose bg-[#F3F5F9] p-12 border-t border-black">
+    <footer class="Prose bg-[#F3F5F9] p-12 mt-6 border-t border-black">
         <div>
             <div class="flex max-md:flex-col gap-4 justify-between">
                 <div class="flex flex-col gap-4 text-xl text-[#26263A]">
@@ -36,6 +36,3 @@
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>

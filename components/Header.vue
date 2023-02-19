@@ -8,22 +8,22 @@
             <span class="h-1 w-full bg-black rounded-sm transition-all duration-500" :class="{'opacity-0': isNav}"></span>
             <span class="h-1 w-full bg-black rounded-sm transition-all duration-500" :class="{'rotate-[29deg] origin-top-right': isNav}"></span>
         </button>
-        <nav class="flex grow gap-5 md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
+        <nav class="flex grow gap-5 max-sm:flex-col md:gap-10 max-sm:w-full max-sm:py-3" :class="{'max-sm:hidden':!isNav } ">            
             <NuxtLink to="/Catalog" class="router-link text-sm uppercase">Каталог</NuxtLink>
             <NuxtLink to="/About" class="router-link text-sm uppercase">О нас</NuxtLink>
             <NuxtLink to="/Services" class="router-link text-sm uppercase">Услуги</NuxtLink>
                
-            <div class="flex ml-auto items-center gap-2">
+            <div class="flex ml-auto items-center gap-2 max-sm:ml-0">
                 <div class="text-sm uppercase text-[#003771]">ru</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">en</div>
                 <div class="text-sm uppercase text-[#A2A5A8]">ch</div>
                 
             </div>   
-            <div v-if="accountStore.login" class="flex gap-2">
-                {{ accountStore.login }}
-                <button @click="logout">Выход</button>
+            <div v-if="accountStore.login" class="flex gap-2">                
+                <NuxtLink to="/account" class="router-link text-base">{{ accountStore.login }}</NuxtLink> 
+                <button @click="accountStore.logout()" class="text-base">Выход</button>
             </div>
-            <div v-else class="flex gap-3">
+            <div v-else-if="!accountStore.login" class="flex gap-3">
                 <NuxtLink to="/Login" class="router-link text-sm uppercase">Вход</NuxtLink> 
                 <NuxtLink to="/Signup" class="router-link text-sm uppercase">Регистрация</NuxtLink> 
             </div>
@@ -34,16 +34,21 @@
 
 <script setup>
     import { useAccountStore } from "~/stores/accountStore";
-
-    const router = useRouter();
-    let isNav = ref();
-   
+    
     const accountStore = useAccountStore();    
+    
+    let isNav = ref();
 
-    const logout = async ()=>{
-        await (accountStore.logout());        
-        router.push({ path: "/" })               
-    }  
+    onMounted(()=>{
+        if (process.client) {
+            if (localStorage.isAuth == "true") {        
+                accountStore.api_token = localStorage.api_token;
+                accountStore.login = localStorage.login;
+            }
+        }
+    })
+
+    
 </script>
 
 <style type="text/tailwindcss">
